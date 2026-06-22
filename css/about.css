@@ -1,0 +1,398 @@
+/* start teacher slider  */
+/* স্লাইডারের মেইন সেকশন মার্জিন */
+.slider-wrapper-section {
+  width: 100%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+}
+
+/* কার্ড স্টাইল */
+.instructor-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* ব্যাকগ্রাউন্ডের ওপর ফুটে ওঠার জন্য ডার্ক শ্যাডো */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ইমেজের লাল ব্যাকগ্রাউন্ড */
+.img-container {
+  background: radial-gradient(circle, #e60000 0%, #660000 100%);
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 280px;
+}
+
+.img-container img {
+  width: 85%;
+  height: auto;
+  display: block;
+}
+
+/* টেক্সট কন্টেইনার */
+.info-container {
+  padding: 20px;
+  text-align: left;
+  background: #ffffff;
+}
+
+.info-container h3 {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.info-container .designation {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.info-container .experience {
+  font-size: 12px;
+  color: #888;
+}
+/* end teacher slider */
+
+
+/* ইমেজের মেইন কন্টেইনার */
+.img-container {
+    background: radial-gradient(circle, #e60000 0%, #660000 100%);
+    width: 100%;
+    height: 300px;      /* আপনার পছন্দমতো হাইট রাখতে পারেন */
+    overflow: hidden;   
+    position: relative; /* ভেতরের ইমেজকে অ্যাবসোলিউট পজিশন দেওয়ার জন্য */
+}
+
+/* ইমেজের আসল সেটিংস (সব গ্যাপ দূর করার জন্য) */
+.img-container img {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* কন্টেইনারের একদম শুরু থেকে বসার জন্য */
+    top: 0;
+    left: 0;
+    object-fit: cover;  /* ছবিকে স্ট্রেচ বা চ্যাপ্টা না করে পুরো জায়গা কভার করবে */
+    object-position: center top; /* ছবির ফোকাস ওপরের দিকে রাখবে */
+}
+
+
+/* start best cocaing */
+/* ==========================================================================
+   Why Choose Us Section Styles
+   ========================================================================== */
+.features-section {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* মেইন ২-কলাম লেআউট */
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: stretch; /* center কেটে এখানে stretch হবে */
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* বাম পাশের ইমেজ সেকশন */
+.features-left {
+    flex: 1 1 400px;
+    text-align: center;
+   
+}
+
+.feature-main-img img {
+    width: 100%;
+    max-width: 450px;
+    height: 500px;        /* auto কেটে এখানে 100% হবে */
+    object-fit: fill;    /* এটি নতুন যোগ হবে, ছবিকে লম্বা করার জন্য */
+}
+
+/* ডান পাশের কন্টেন্ট সেকশন */
+.features-right {
+    flex: 1 1 600px;
+}
+
+.features-right .section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #111111;
+    margin-bottom: 15px;
+}
+
+.features-right .section-subtitle {
+    font-size: 15px;
+    color: #555555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* ৪টি কার্ডের গ্রিড (২টি করে প্রতি লাইনে) */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* সিঙ্গেল কার্ড ডিজাইন (স্ক্রিনশটের মতো হুবহু সফট শ্যাডো) */
+.feature-card {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 25px 20px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); /* সফট হোয়াইট শ্যাডো */
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* আইকন বক্স */
+.feature-icon-box {
+    background: #fff0f0; /* হালকা লালচে ব্যাকগ্রাউন্ড আইকনের জন্য */
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    height: 50px;
+}
+
+.feature-icon-box img {
+    width: 26px;
+    height: 26px;
+}
+
+/* কার্ডের ভেতরের টেক্সট */
+.feature-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.feature-info p {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* end best coacing */
+
+
+/* ==========================================================================
+   সব পেজের ওপরের অতিরিক্ত গ্যাপ একবারে দূর করার ফাইনাল ফিক্স
+   ========================================================================== */
+
+/* ১. মেইন সেকশন এবং কন্টেইনারের ওপরের সব প্যাডিং জিরো করা */
+.home-section, 
+.container-fluid, 
+.slider-wrapper-section, 
+.features-section {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* ২. পেজের প্রথম বড় টাইটেল বা হেডিং এর ওপরের গ্যাপ দূর করা */
+.home-section h2, 
+.container-fluid h2, 
+.section-title {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* ৩. বুটস্ট্র্যাপের রো (Row) এর ওপরের কোনো ডিফল্ট গ্যাপ থাকলে তা জিরো করা */
+.home-section .row, 
+.container-fluid .row {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+
+
+
+/* --- Basic Reset & Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+body {
+    background-color: #ed8142;
+    color: #333333;
+}
+
+/* --- Layout Container --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* --- Section Header Styling --- */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a2530;
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #666666;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- Main Content Grid Layout --- */
+.main-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* --- Left Side: 2-Column Features Grid --- */
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 25px;
+    column-gap: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Customizing the Shield Icon to match the screenshot */
+.check-icon {
+    font-size: 24px;
+    color: #00b4d8; /* Light blue base */
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 2px 4px rgba(0, 180, 216, 0.3));
+}
+
+/* For browsers that don't support text-gradient fallback */
+@supports not (-webkit-background-clip: text) {
+    .check-icon {
+        color: #00b4d8;
+    }
+}
+
+.feature-item span {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* --- Right Side: Image Responsive Styling --- */
+.graphics-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illustration-placeholder {
+    width: 100%;
+    max-width: 450px;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* --- Responsive Media Queries (Mobile & Tablet) --- */
+@media (max-width: 992px) {
+    .main-content {
+        grid-template-columns: 1fr; /* Stack text and image vertically */
+        gap: 50px;
+    }
+    
+    .graphics-side {
+        order: -1; /* Pushes image to the top on smaller screens if preferred */
+    }
+}
+
+@media (max-width: 600px) {
+    .features-list {
+        grid-template-columns: 1fr; /* Features list becomes single column on mobile */
+        row-gap: 20px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* start live chat */
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-box .user-message,
+.chat-box .bot-message {
+    max-width: 75%;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+}
+
+/* end live chat */
+
+
+
+
+
