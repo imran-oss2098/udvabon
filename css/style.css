@@ -537,38 +537,43 @@ body {
   background: #38bdf8;
   transform: scale(1.1);
 }
-
-.smart-footer::before{
-    pointer-events: none;
+ .smart-footer::before {
+    pointer-events: none !important;
+    z-index: 0 !important;
 }
 
-.smart-footer .row,
-.smart-footer hr,
-.smart-footer .text-center{
+.smart-footer .row {
     position: relative;
-    z-index: 1;
+    z-index: 2 !important;
 }
-
-/* end footer */
-/*  start media quiry */
+ 
+/* end foter  */
+/* start media quiry */
 
 /* ==========================================================================
    Mobile & Responsive Layout Fix (মোবাইল ভিউর জন্য স্পেশাল ফিক্স)
    ========================================================================== */
 
+/* ডানে-বামে স্ক্রল হওয়া বন্ধ করতে পুরো বডিতে ওভারফ্লো কন্ট্রোল */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+
+}
+
 @media (max-width: 991px) {
-    /* ১. মেইন কন্টেন্ট এরিয়াকে মোবাইলে পুরো স্ক্রিন জুড়ে জায়গা দেওয়া */
+    /* ১. মেইন কন্টেন্ট এরিয়া: নোটিশ বোর্ড যেন উপরে না উঠে যায় সেজন্য top-padding বা মার্জিন বাড়াতে হবে */
     .home-section {
         margin-left: 0 !important;
         width: 100% !important;
-        padding: 10px !important;
+        padding: 80px 15px 20px 15px !important; /* উপরে ৮০px প্যাডিং দেওয়া হয়েছে যাতে ব্যানারের নিচে নামে */
+        
     }
 
-    /* ২. আসল সমস্যা: .container-fluid ক্লাসের মার্জিন ও উইডথ মোবাইলে রিসেট করা */
+    /* ২. সমাধান: .container-fluid এর প্যাডিং ০ করার কারণে রো বাইরে চলে যেত, তাই এখানে ডানে-বামে ১৫px প্যাডিং দেওয়া হলো */
     .container-fluid {
-        margin-left: 0 !important;
-    width: 100% !important;
-    padding: 0 !important;
+         margin-left: 0 !important;
+         width: 100% !important;
     }
 
     /* ৩. ছবি এবং ২-কলামের লেআউট মোবাইলে ওপর-নিচ করা */
@@ -601,32 +606,50 @@ body {
         font-size: 14px !important;
     }
 
-.smart-footer {
-   text-align: center;
-    margin: 0 !important;
-    border-radius: 0 !important;
-    width: 100% !important;
-  }
+    .smart-footer {
+        text-align: center;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+    }
 
-  .smart-footer .row > div {
-    margin-bottom:30px;
-  }
+    .smart-footer .row > div {
+        margin-bottom:30px;
+    }
 
-  .smart-link {
-    justify-content: center;
-  }
+    .smart-link {
+        justify-content: center;
+    }
 
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap:20px;
-  }
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:20px;
+    }
 
-  .social-icons a {
-    margin-right: 0;
-  }
+    .social-icons a {
+        margin-right: 0;
+    }
 
+    .footer-wrapper{
+    padding: 0 !important;
 }
-/*  end media quiry */
 
+.footer-wrapper .smart-footer{
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+}
+
+.footer-wrapper .row{
+    margin: 0;
+    padding: 20px 15px;
+}
+
+.navy12{
+    padding-top:1px !important;
+}
+    
+}
+/* end media quiry */
